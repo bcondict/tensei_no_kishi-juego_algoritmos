@@ -1,0 +1,4 @@
+repository "tensei no kishi 2025-05-11_21-23-56/tensei no kishi@4673602768954@cloud"
+  path "/"
+    br "/main"
+    co "/main"
