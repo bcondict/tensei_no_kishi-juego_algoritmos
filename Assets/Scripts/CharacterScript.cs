@@ -1,45 +1,47 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-// using System.Collections;
-// using System.Collections.Generic;
 // using UnityEngine;
 // using UnityEngine.UI;
 
 public class CharacterScript : MonoBehaviour
 {
-    public Rigidbody2D rigidbody;
-    public float speed = 5;
+    // public Rigidbody2D rigidbody;
+    // public float speed = 10;
+    [SerializeField] private float moveSpeed = 1f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private PlayerControls playerControls;
+    private Vector2 movement;
+    private Rigidbody2D rb;
+
+    private void Awake()
     {
-
+        playerControls = new PlayerControls();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-
+        playerControls.Enable();
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-        if (Input.GetKey("d"))
-        {
-            rigidbody.MovePosition(new Vector2(speed * Time.deltaTime, 0));
-            // rigidbody.AddForce(new Vector2(speed * Time.deltaTime, 0));
-        }
-        if (Input.GetKey("a"))
-        {
-            // rigidbody.AddForce(new Vector2((speed * Time.deltaTime) * -1, 0));
-        }
-        if (Input.GetKey("s"))
-        {
-            // rigidbody.AddForce(new Vector2(0, (speed * Time.deltaTime) * -1));
+        PlayerInput();
+    }
 
-        }
-        if (Input.GetKey("w"))
-        {
-            // rigidbody.AddForce(new Vector2(0, speed * Time.deltaTime));
-        }
+    private void FixedUpdate()
+    {
+        Move();
+    }
+
+    private void PlayerInput()
+    {
+        movement = playerControls.Movement.Move.ReadValue<Vector2>();
+    }
+
+    private void Move()
+    {
+        rb.MovePosition((rb.position + movement * (moveSpeed * Time.fixedDeltaTime)));
     }
 }
