@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4621635773780402837}
   - component: {fileID: 4329423957397085346}
   - component: {fileID: -8798508565010789539}
+  - component: {fileID: 8912613873822980538}
   m_Layer: 0
   m_Name: demon1
   m_TagString: Untagged
@@ -212,3 +213,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8912613873822980538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881492897310403919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc7d508b03969c844adaf82737bd06ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
