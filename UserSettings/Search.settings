@@ -9,7 +9,11 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+<<<<<<< HEAD
 	"picker_window_position_offset.075BCD15" = "185;391;320;550"
+=======
+	"picker_window_position_offset.075BCD15" = "77;213;320;550"
+>>>>>>> Lina
 	"picker_visibility_flags.075BCD15" = "264"
 	"picker_item_size.075BCD15" = "96"
 	"picker_inspector.075BCD15" = "0"
@@ -45,11 +49,14 @@ providers = {
 		priority = 90
 		defaultAction = null
 	}
+<<<<<<< HEAD
 	profilermarkers = {
 		active = false
 		priority = 100
 		defaultAction = null
 	}
+=======
+>>>>>>> Lina
 	performance = {
 		active = false
 		priority = 100
@@ -60,6 +67,14 @@ providers = {
 		priority = 100
 		defaultAction = null
 	}
+<<<<<<< HEAD
+=======
+	profilermarkers = {
+		active = false
+		priority = 100
+		defaultAction = null
+	}
+>>>>>>> Lina
 	log = {
 		active = false
 		priority = 210
@@ -82,4 +97,9 @@ ignoredProperties = "id;name;classname;imagecontentshash"
 helperWidgetCurrentArea = "all"
 disabledIndexers = ""
 minIndexVariations = 2
+<<<<<<< HEAD
 findProviderIndexHelper = true
+=======
+findProviderIndexHelper = true
+itemIconSize = 32
+>>>>>>> Lina

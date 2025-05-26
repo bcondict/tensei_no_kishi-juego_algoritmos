@@ -66,5 +66,9 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
     },
+<<<<<<< HEAD
     "dotnet.defaultSolution": "tensei no kishi.sln"
+=======
+    "dotnet.defaultSolution": "TD.sln"
+>>>>>>> Lina
 }
