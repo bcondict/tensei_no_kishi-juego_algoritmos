@@ -1,0 +1,8 @@
+using UnityEngine;
+
+public class EnemyGeneretorHandler : MonoBehaviour
+{
+    [SerializeField] private List<EnemyGenerator> enemyGenerators;
+
+
+}

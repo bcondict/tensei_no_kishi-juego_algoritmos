@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerController Instance;
 
+    private SpriteRenderer sr;
+
     private void Awake()
     {
         playerControls = new PlayerControls();
@@ -30,6 +32,8 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         PlayerInput();
+        sr = GetComponent<SpriteRenderer>();
+        sr.sortingOrder = Mathf.RoundToInt(-transform.position.y * 100);
     }
 
     private void FixedUpdate()

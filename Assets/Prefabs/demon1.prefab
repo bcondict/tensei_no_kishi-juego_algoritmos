@@ -13,11 +13,12 @@ GameObject:
   - component: {fileID: 5716577055507528372}
   - component: {fileID: 1813423587721734174}
   - component: {fileID: 4621635773780402837}
-  - component: {fileID: 4329423957397085346}
   - component: {fileID: -8798508565010789539}
+  - component: {fileID: 4329423957397085346}
   - component: {fileID: 8912613873822980538}
   - component: {fileID: 4873392166853930252}
   - component: {fileID: 785605303636407695}
+  - component: {fileID: 2080659521942511684}
   m_Layer: 0
   m_Name: demon1
   m_TagString: Untagged
@@ -180,19 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e418d83591b34948b809b43a7b5d1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4329423957397085346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8881492897310403919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6fb6dd1417ebda49ac8ddb9d7ee53ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  castleGameObject: {fileID: 8911451306643626371, guid: 7cc3e2239e716ac47add5a6e5e4d3604, type: 3}
   moveSpeed: 2
+  damage: 1
 --- !u!95 &-8798508565010789539
 Animator:
   serializedVersion: 7
@@ -215,6 +206,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4329423957397085346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881492897310403919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6fb6dd1417ebda49ac8ddb9d7ee53ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
 --- !u!114 &8912613873822980538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,3 +260,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: b01a4d653d6f0c041a9c8b7f5c2d253d, type: 2}
   restoreDefaultMatTime: 0.2
+--- !u!60 &2080659521942511684
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881492897310403919}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.72727275, y: 1.0454545}
+    newSize: {x: 0.8, y: 1.15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.223346, y: 0.7612899}
+      - {x: 0.052915752, y: 0.4053108}
+      - {x: 0.033968568, y: -0.24990171}
+      - {x: 0.06047499, y: -0.41669947}
+      - {x: 0.3901428, y: -0.7347829}
+      - {x: 0.6287054, y: -0.2914288}
+      - {x: 0.5567444, y: 0.3636859}
+  m_UseDelaunayMesh: 0
