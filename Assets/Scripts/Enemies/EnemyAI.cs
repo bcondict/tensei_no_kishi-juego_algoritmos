@@ -86,7 +86,6 @@ public class EnemyAI : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Castle>())
         {
-            Debug.Log("touching");
             isTouchingCastle = true;
             state = State.Atacking;
         }

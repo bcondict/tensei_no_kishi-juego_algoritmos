@@ -6,12 +6,13 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private GameObject demon1Prefab;
     public int enemyCount = 0;
 
-    public bool StartNewRound(int enemyAmmount)
+    public void StartNewRound(int enemyAmmount)
     {
+        enemyCount = 0;
         while (enemyCount < enemyAmmount)
+        {
             StartCoroutine(GenerateEnemy());
-
-        return true;
+        }
     }
 
     public IEnumerator GenerateEnemy()

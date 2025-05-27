@@ -9,10 +9,13 @@ public class EnemyHealth : MonoBehaviour
     private Knockback knockback;
     private Flash flash;
 
+    private GameObject enemies;
+
     private void Awake()
     {
         flash = GetComponent<Flash>();
         knockback = GetComponent<Knockback>();
+        enemies = GameObject.Find("enemies");
     }
 
     private void Start()
@@ -33,6 +36,7 @@ public class EnemyHealth : MonoBehaviour
         {
             GameObject flash = Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            enemies.GetComponent<EnemyGeneratorHandler>().DieEnemy();
         }
     }
 }
